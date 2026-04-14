@@ -1,53 +1,76 @@
-import './Navbar.css'
-import profile from "../assets/myphoto.jpg"
-import { IoCodeWorkingOutline, IoHomeOutline, IoMailOutline, IoPersonOutline } from 'react-icons/io5'
-import { Link } from 'react-router-dom'
-
+import "../STYLES/Navbar.css";
+import { motion } from "framer-motion";
+import {
+  IoCodeWorkingOutline,
+  IoHomeOutline,
+  IoMailOutline,
+  IoPersonOutline,
+} from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <>
-    <div className='navbar'>
-
-        <div className="profile">
-            <div>
-            <img src={profile} alt="" />
-            </div>
-            <div>
-                <h3>JOHN VIANNEY</h3>
-            </div>
+      {/* DESKTOP NAVBAR */}
+      <motion.div
+        className="navbar"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="logo">
+          <h2>
+            JOHN <span>VIANNEY</span>
+          </h2>
         </div>
 
-        <div className="menue">
-            <ul>
-                 <li><Link to='/' style={{textDecoration:"none", color:'black'}}>HOME</Link></li>
-                <li><Link to='/About' style={{textDecoration:"none", color:'black'}}>ABOUT</Link></li>
-                <li><Link to='/Projects' style={{textDecoration:"none", color:'black'}}>PROJECTS</Link></li>
-                <li><Link to='/Contact' style={{textDecoration:"none", color:'black'}}>CONTACT</Link></li>
-                
-            </ul>
-        </div>
-    </div>
+        <ul className="menu">
+          <li><Link to="/">HOME</Link></li>
+          <li><Link to="/About">ABOUT</Link></li>
+          <li><Link to="/Projects">PROJECTS</Link></li>
+          <li><Link to="/Contact">CONTACT</Link></li>
+        </ul>
+      </motion.div>
 
-      {/* MONILE NAVBAR */}
-        <div className="mobile-nav">
-            <ul>
-                <li><Link to='/' style={{textDecoration:"none", color:'black'}}><IoHomeOutline size={24}/></Link><br />
-                <span>HOME</span>
-                </li>
-                <li><Link to='/About' style={{textDecoration:"none", color:'black'}}><IoPersonOutline size={24}/></Link>
-                <span>ABOUT</span>
-                </li>
-                <li><Link to='/Projects' style={{textDecoration:"none", color:'black'}}><IoCodeWorkingOutline size={24}/></Link>
-                <span>PROJECTS</span>
-                </li>
-                <li><Link to='/Contact' style={{textDecoration:"none", color:'black'}}><IoMailOutline size={24}/></Link>
-                <span>CONTACT</span>
-                </li>
-            </ul>
-        </div>
-        </>
-  )
-}
+      {/* MOBILE NAVBAR */}
+      <motion.div
+        className="mobile-nav"
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <ul>
+          <li>
+            <Link to="/">
+              <IoHomeOutline size={22} />
+              <span>HOME</span>
+            </Link>
+          </li>
 
-export default Navbar
+          <li>
+            <Link to="/About">
+              <IoPersonOutline size={22} />
+              <span>ABOUT</span>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/Projects">
+              <IoCodeWorkingOutline size={22} />
+              <span>PROJECTS</span>
+            </Link>
+          </li>
+
+          <li>
+            <Link to="/Contact">
+              <IoMailOutline size={22} />
+              <span>CONTACT</span>
+            </Link>
+          </li>
+        </ul>
+      </motion.div>
+    </>
+  );
+};
+
+export default Navbar;

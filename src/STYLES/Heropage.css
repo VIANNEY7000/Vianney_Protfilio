@@ -1,0 +1,96 @@
+.heropage {
+  height: 100vh;
+  top: 60px;
+  align-items: center;
+  padding: 0 10%;
+  background: radial-gradient(circle at top, #111827, #05070d);
+  color: white;
+}
+
+.intro h1 {
+  font-size: 55px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.intro h2 {
+  font-size: 22px;
+  margin-top: 10px;
+  color: #cbd5e1;
+}
+
+.intro h2 span {
+  color: #00e5ff;
+  text-shadow: 0 0 10px #00e5ff;
+}
+
+.intro p {
+  margin-top: 15px;
+  max-width: 600px;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.intro button {
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: #00e5ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.3);
+  transition: 0.3s ease;
+}
+
+.intro button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.6);
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1024px) {
+  .heropage {
+    padding: 0 6%;
+  }
+
+  .intro h1 {
+    font-size: 42px;
+  }
+
+  .intro h2 {
+    font-size: 20px;
+  }
+
+  .intro p {
+    max-width: 500px;
+    font-size: 15px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .heropage {
+    height: 100vh;
+    padding: 0 5%;
+    text-align: left;
+  }
+
+  .intro h1 {
+    font-size: 34px;
+    line-height: 1.2;
+  }
+
+  .intro h2 {
+    font-size: 18px;
+  }
+
+  .intro p {
+    font-size: 14px;
+    max-width: 100%;
+  }
+
+  .intro button {
+    width: 100%;
+    text-align: center;
+  }
+}

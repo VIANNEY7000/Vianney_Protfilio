@@ -1,0 +1,132 @@
+/* SECTION */
+.projects {
+  padding: 100px 10%;
+  background: #05070d;
+  color: white;
+}
+
+.projects h1 {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 2px;
+  margin-bottom: 60px;
+}
+
+.projects h1 {
+  color: #00e5ff;
+  text-shadow: 0 0 10px #00e5ff;
+}
+
+/* PROJECT LIST */
+.project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* CARD */
+.project-card {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: #00e5ff;
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.15);
+}
+
+/* IMAGE */
+.project-image {
+  flex: 1;
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* TEXT */
+.abt-product {
+  flex: 1;
+}
+
+.abt-product h2 {
+  color: #00e5ff;
+  margin-bottom: 10px;
+}
+
+.abt-product p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* TECH TAGS */
+.dom-con {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.dom {
+  padding: 5px 10px;
+  font-size: 12px;
+  border: 1px solid #00e5ff;
+  border-radius: 20px;
+  color: #00e5ff;
+}
+
+/* BUTTONS */
+.project-btn {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.project-btn a {
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+  border: 1px solid #00e5ff;
+  color: white;
+}
+
+.project-btn a:hover {
+  background: #00e5ff;
+  color: black;
+  box-shadow: 0 0 15px #00e5ff;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .abt-product {
+    text-align: center;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .projects {
+    padding: 80px 6%;
+  }
+
+  .projects h1 {
+    font-size: 30px;
+  }
+}

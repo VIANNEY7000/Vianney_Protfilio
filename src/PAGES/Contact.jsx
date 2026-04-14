@@ -1,60 +1,60 @@
-import { motion } from 'framer-motion'
-import { useState } from 'react';
+import { motion } from "framer-motion";
+import { useState } from "react";
+import '../STYLES/contact.css'
 
+const Contact = () => {
+  const [loading, setLoading] = useState(false);
 
+  const handleSubmit = () => {
+    setLoading(true);
+  };
 
-const Contanct = () => {
-
-   const [loading, setLoading] = useState(false);
-
-      const handleSubmit = async (e) => {
-  setLoading(true);
-};
   return (
-    
-    <>
-    
-    <div className='contact'>
-      
-      <h1>CONTACT</h1>
-      <p>Feel free to Contact me by submitting the form below and I will get back to you as soon as possible</p>
-      
-        
-       <motion.form
-        className='contact-box'
-         action="https://formspree.io/f/maqbqddn"
-          method="POST"
-          onSubmit={handleSubmit}
-        initial={{ Opacity: 0, y: 20}}
-        whileInView={{ Opacity: 1, y: 0 }}
+    <div className="contact">
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        // animate={{  Opacity: 0.5, y: 0 }}
-        transition={{ duration: 1}}
-       >
-     
-    <label htmlFor="">
-      <input type="text" name='name' placeholder='Enter name' />
-    </label>
+      >
+        CONTACT
+      </motion.h1>
 
-  <label>
-    <input type="email" name="email" placeholder='Enter email'/>
-  </label>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
+        viewport={{ once: true }}
+      >
+        Let’s work together — send a message and I’ll respond as soon as possible.
+      </motion.p>
 
-  <label>
-    <textarea name="message" placeholder='Message' style={{resize:"none"}}></textarea>
-  </label>
-  
-  <div>
-  <button type="submit">{loading ? <span className="spinner"></span> : "Send"}</button>
-  </div>
+      <motion.form
+        className="contact-box"
+        action="https://formspree.io/f/maqbqddn"
+        method="POST"
+        onSubmit={handleSubmit}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+      >
+        <input type="text" name="name" placeholder="Your Name" required />
 
+        <input type="email" name="email" placeholder="Your Email" required />
 
-       </motion.form>
-     
+        <textarea
+          name="message"
+          placeholder="Your Message..."
+          required
+        ></textarea>
+
+        <button type="submit" disabled={loading}>
+          {loading ? "Sending..." : "Send Message"}
+        </button>
+      </motion.form>
     </div>
-    
-    </>
-  )
-}
+  );
+};
 
-export default Contanct
+export default Contact;
