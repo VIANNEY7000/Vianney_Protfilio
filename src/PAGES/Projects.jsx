@@ -2,7 +2,7 @@ import React from "react";
 import cloth from "../assets/clothwbs.png";
 import car from "../assets/carwebsite.png";
 import { motion } from "framer-motion";
-import '../STYLES/projects.css'
+import '../STYLES/Projects.css'
 
 const Projects = () => {
   const projects = [
