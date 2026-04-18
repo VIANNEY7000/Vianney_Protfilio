@@ -98,12 +98,12 @@
         display: none;
     }
 
-    /* ===== FLOATING IOS-STYLE NAV ===== */
     .mobile-nav {
         display: block;
         position: fixed;
         bottom: 18px;
         width: 92%;
+        left: 15px;
         background-color: rgba(251, 248, 248, 0.037);
     }
 
