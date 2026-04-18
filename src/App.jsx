@@ -11,9 +11,6 @@ const App = () => {
   return (
     <>
      <Navbar/>
-      <div className="name_nav">
-           <h2> VIANNEY PROFOLIO</h2>
-        </div>
    <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/About' element={<About/>}/>

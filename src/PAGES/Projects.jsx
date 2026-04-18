@@ -1,5 +1,5 @@
 import React from "react";
-import cloth from "../assets/clothwbs.png";
+import cloth from "../assets/vfh.png";
 import car from "../assets/carwebsite.png";
 import { motion } from "framer-motion";
 import '../STYLES/Projects.css'
