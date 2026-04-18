@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
-import '../STYLES/contact.css'
+import '../STYLES/Contact.css'
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
